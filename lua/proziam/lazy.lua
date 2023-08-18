@@ -13,6 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
         lazypath,
     })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -21,6 +22,12 @@ require("lazy").setup({
         config = function()
             require('Comment').setup()
         end
+    },
+    {
+        'mbbill/undotree'
+    },
+    {
+        'tpope/vim-fugitive'
     },
     {
         "nvim-tree/nvim-tree.lua",
