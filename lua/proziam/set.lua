@@ -11,4 +11,6 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "70"
+-- Requires Xclip on X11 or wl-clipboard on Wayland
+vim.opt.clipboard = "unnamedplus"
 
