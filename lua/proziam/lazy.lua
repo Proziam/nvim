@@ -18,6 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+        'nvim-lualine/lualine.nvim'
+    },
+    {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
@@ -45,8 +48,8 @@ require("lazy").setup({
         branch = 'v2.x',
         dependencies = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },             -- Required
-            { 'williamboman/mason.nvim' },           -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
+            { 'williamboman/mason.nvim'},
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
