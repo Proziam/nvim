@@ -17,21 +17,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        'nvim-lualine/lualine.nvim'
-    },
+    { 'nvim-lualine/lualine.nvim' },
     {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
         end
     },
-    {
-        'mbbill/undotree'
-    },
-    {
-        'tpope/vim-fugitive'
-    },
+    { 'mbbill/undotree' },
+    { 'tpope/vim-fugitive' },
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
@@ -48,8 +42,8 @@ require("lazy").setup({
         branch = 'v2.x',
         dependencies = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            { 'williamboman/mason.nvim'},
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
