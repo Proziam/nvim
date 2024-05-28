@@ -36,6 +36,12 @@ vim.keymap.set('n', '<F2>', '<cmd>Neotree toggle<cr>')
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
+-- NOTE: Requires xclip or xsel on X11 or wl-clipboard on wayland
+vim.keymap.set('n', '<leader>y', '"+y', { desc = '[Y]ank to system clipboard' })
+vim.keymap.set('v', '<leader>y', '"+y', { desc = '[Y]ank to system clipboard' })
+vim.keymap.set('n', '<leader>Y', '"+Y', { desc = '[Y]ank to system clipboard' })
+vim.keymap.set('n', '<leader>p', '"+p', { desc = '[P]aste from system clipboard' })
+
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
