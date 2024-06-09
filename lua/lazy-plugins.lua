@@ -29,6 +29,8 @@ require('lazy').setup({
   require 'proziam.plugins.flutter-tools',
 
   require 'proziam.plugins.obsidian',
+
+  require 'proziam.plugins.lazygit',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
