@@ -54,4 +54,22 @@ vim.opt.scrolloff = 10
 -- Necessary for Obsidian nvim
 vim.opt.conceallevel = 1
 
+-- Sends yanked values to windows clipboard
+-- https://github.com/microsoft/WSL/issues/4440
+local clip = '/mnt/c/Windows/System32/clip.exe' -- Change this path if needed
+
+if vim.fn.executable(clip) then
+  local opts = {
+    callback = function()
+      if vim.v.event.operator ~= 'y' then
+        return
+      end
+      vim.fn.system(clip, vim.fn.getreg(0))
+    end,
+  }
+
+  opts.group = vim.api.nvim_create_augroup('WSLYank', {})
+  vim.api.nvim_create_autocmd('TextYankPost', { group = opts.group, callback = opts.callback })
+end
+
 -- vim: ts=2 sts=2 sw=2 et
