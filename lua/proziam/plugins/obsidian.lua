@@ -20,7 +20,9 @@ return {
     workspaces = {
       {
         name = 'obsidian',
-        path = '~/Documents/obsidian/',
+        -- in WSL you may want to reach into the Windows drive
+        -- /mnt/c/Users/ericl/Documents/obsidian/
+        path = '/mnt/c/Users/ericl/Documents/obsidian/',
       },
     },
     mappings = {
