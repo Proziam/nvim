@@ -51,9 +51,6 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- Necessary for Obsidian nvim
-vim.opt.conceallevel = 1
-
 -- Sends yanked values to windows clipboard
 -- https://github.com/microsoft/WSL/issues/4440
 local clip = '/mnt/c/Windows/System32/clip.exe' -- Change this path if needed
