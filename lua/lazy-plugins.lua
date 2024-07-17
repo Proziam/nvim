@@ -28,8 +28,6 @@ require('lazy').setup({
 
   require 'proziam.plugins.flutter-tools',
 
-  require 'proziam.plugins.obsidian',
-
   require 'proziam.plugins.lazygit',
 }, {
   ui = {
