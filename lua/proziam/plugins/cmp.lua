@@ -39,7 +39,11 @@ return {
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
-      luasnip.config.setup {}
+      luasnip.config.setup {
+        -- LuaSnip is setup with Snipmate style snippets according to the docs - https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#snipmate
+        -- BUG: Relative path doesn't work on windows. Workaround is to use the full path
+        require('luasnip.loaders.from_snipmate').lazy_load { paths = { 'C:\\Users\\ericl\\AppData\\Local\\nvim\\lua\\proziam\\snippets' } },
+      }
 
       cmp.setup {
         snippet = {
