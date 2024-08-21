@@ -26,8 +26,6 @@ require('lazy').setup({
 
   require 'proziam.plugins.neo-tree',
 
-  require 'proziam.plugins.flutter-tools',
-
   require 'proziam.plugins.lazygit',
 }, {
   ui = {
