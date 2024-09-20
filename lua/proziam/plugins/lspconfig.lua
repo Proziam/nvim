@@ -76,6 +76,8 @@ return {
       })
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
+      local lspconfig = require 'lspconfig'
+
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
       --  Add any additional override configuration in the following tables. Available keys are:
       --  - cmd (table): Override the default command used to start the server
@@ -90,7 +92,16 @@ return {
           filetypes = { 'html', 'htmldjango' },
           capabilities = capabilities,
         },
-        tailwindcss = {},
+        tailwindcss = {
+          capabilities = capabilities,
+          filetypes = {
+            'html',
+            'htmldjango',
+            'typescript',
+            'svelte',
+            'typescriptreact',
+          },
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
