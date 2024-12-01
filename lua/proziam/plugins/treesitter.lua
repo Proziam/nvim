@@ -29,8 +29,8 @@ return {
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-      -- require('nvim-treesitter.install').compilers = { 'cc', 'gcc', 'clang', 'cl', 'zig' }
-      require('nvim-treesitter.install').compilers = { 'zig' }
+      require('nvim-treesitter.install').compilers = { 'cc', 'gcc', 'clang', 'cl', 'zig' }
+      -- require('nvim-treesitter.install').compilers = { 'zig' }
       -- Prefer git instead of curl in order to improve connectivity in some environments
       require('nvim-treesitter.install').prefer_git = false
       ---@diagnostic disable-next-line: missing-fields
