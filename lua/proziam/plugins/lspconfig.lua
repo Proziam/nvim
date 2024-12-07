@@ -87,14 +87,7 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         svelte = {},
-        rust_analyzer = {
-          settings = {
-            -- Added to hopefully resolve an LSP crashing issue
-            diagnostic = {
-              refreshSupport = false,
-            },
-          },
-        },
+        rust_analyzer = {},
         html = {
           filetypes = { 'html', 'htmldjango' },
           capabilities = capabilities,
